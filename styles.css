@@ -3,7 +3,7 @@ html {
   box-sizing: border-box;
   color: #333333;
   font-family: 'Lobster', cursive;
-  font-size: .3em;
+  font-size: 1em;
   height: 100%;
   min-width: 320px;
   width: 100%;
@@ -18,8 +18,6 @@ body {
   width: 100%;
   height: 100%;
 }
-
-h1 { font-size: 10em; }
 
 .main {
   height: 100%;
@@ -41,9 +39,15 @@ header {
 .title,
 .subtitle { margin: 0 auto; }
 
-.title { text-align: center; }
+.title {
+  font-size: 3em;
+  text-align: center;
+}
 
-.subtitle { text-align: right; }
+.subtitle {
+  font-size: 1.2em;
+  text-align: right;
+}
 
 section {
   padding: 1em;
@@ -51,8 +55,6 @@ section {
 
 form {
   margin: 0 auto;
-  /* font-size: 2em; */
-  /* width: 10%; */
 }
 
 .form-unit {
@@ -71,6 +73,7 @@ form {
 .form-unit textarea {
   border: none;
   border-radius: 5px;
+  font-family: 'Lobster', cursive;
   font-size: 1.25em;
   padding: .5em;
 }
@@ -84,22 +87,29 @@ form {
   border: 1px solid #333333;
   border-radius: 5px;
   cursor: pointer;
+  font-family: 'Lobster', cursive;
   font-size: 1.25em;
   padding: .5em;
   transition: all .2s ease-in-out;
 }
 
 @media (min-width: 500px) {
-  html { font-size: .5em; }
-
-  form { width: 20%; }
+  form { width: 75%; }
 
   .form-unit button:hover {
     background-color: #333333;
     color: #E2E2E2;
   }
+
+  .title { font-size: 5em; }
+
+  .subtitle { font-size: 1.5em; }
 }
 
-@media (min-width: 768px) {
-  html { font-size: .75em; }
+@media (min-width: 800px) {
+  form { width: 30%; }
+
+  .title { font-size: 8.5em; }
+
+  .subtitle { font-size: 2.2em; }
 }
