@@ -19,65 +19,44 @@
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" type="image/x-icon" href="favicon.png" />
 	<meta name="description" content="Azabache LTD: CRN 10517995">
-	<title>Azabache LTD</title>
+	<title>Azabache</title>
+	<meta name="description" content="Azabache Technology Wigan,Manchester,UK;Technology,software,website,
+	solutions,innovative,chatbots,app,mobile,businesses,design,marketing.European,UK" />
+	<meta name="robots" content="index, follow">
+	<meta name="revisit-after" content="7 days">
 </head>
 
 <body>
 	<main class="main">
 		<header>
 			<div class="header-text">
-				<h1 class="title">AZABACHE</h1>
+				<img class="header-text-image" src="monologo.svg" />
 				<h2 class="subtitle">Where technology meets humanity.
 					<span class="cursor">|</span>
 				</h2>
 			</div>
-			<nav>
-				<ul class="nav-list">
-					<li class="nav-list-item">About</li>
-					<li class="nav-list-item">Clients</li>
-					<li class="nav-list-item">Contact</li>
-				</ul>
-			</nav>
+			<button class="btn" id="contact-link" data-target="#contact">
+				<span>Reach out</span>
+			</button>
 		</header>
-		<section>
-			<div class="clients">
-				<div class="clients-item">
-					<span>Roboworks</span>
-					<div class="clients-item-reveal">
-						<a class="clients-item-reveal-button">See more</a>
-					</div>
-				</div>
-				<div class="clients-item">
-					<span>Unique Insights</span>
-					<div class="clients-item-reveal">
-						<a class="clients-item-reveal-button">See more</a>
-					</div>
-				</div>
-				<div class="clients-item">
-					<span>Speedy Movers</span>
-					<div class="clients-item-reveal">
-						<a class="clients-item-reveal-button">See more</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section>
+
+		<section id="contact">
 			<form name="contact" method="POST" netlify>
-				<p class="form-unit">
+				<div class="form-unit">
 					<label>Your Name:</label>
-					<input type="text" name="name" min=1>
-				</p>
-				<p class="form-unit">
+					<input type="text" name="name" required>
+				</div>
+				<div class="form-unit">
 					<label>Your Email: </label>
-					<input type="email" name="email">
-				</p>
-				<p class="form-unit">
-					<label>Message: </label>
-					<textarea name="message"></textarea>
-				</p>
-				<p class="form-unit">
-					<button type="submit">Send</button>
-				</p>
+					<input type="email" name="email" required>
+				</div>
+				<div class="form-unit">
+					<label>Inquiry: </label>
+					<textarea name="message" required></textarea>
+				</div>
+				<div class="form-unit">
+					<button class="btn" type="submit">Send</button>
+				</div>
 			</form>
 		</section>
 	</main>

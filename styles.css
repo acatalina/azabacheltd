@@ -1,5 +1,5 @@
 html {
-  background-color: #E2E2E2;
+  background-color: #e2e2e2;
   color: #333333;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
@@ -19,8 +19,6 @@ html {
   box-sizing: border-box;
 }
 
-ul { list-style: none; }
-
 *::before,
 *::after { box-sizing: inherit; }
 
@@ -36,17 +34,24 @@ body {
 }
 
 header {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 
 .header-text {
-  flex-grow: 1;
-  justify-content: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin: 2em 0;
+  width: 80%;
+}
+
+.header-text-image {
+  margin: 0 auto;
+  width: 100%
 }
 
 .title {
@@ -59,7 +64,6 @@ header {
 .subtitle {
   font-family: 'Oswald', sans-serif;
   font-size: 1em;
-  margin-top: -10px;
   text-align: right;
 }
 
@@ -67,96 +71,29 @@ header {
   animation: 1s blink step-end infinite;
 }
 
-nav {
-  width: 100%;
-}
-
-.nav-list {
-  align-items: center;
-  display: flex;
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.5em;
-  justify-content: center;
-  list-style: none;
-  width: 100%;
-}
-
-.nav-list-item {
-  margin: 0 2em;
-  padding: .75em;
-}
-
 @keyframes blink {
   0%, 100% { color: transparent;}
   50% {color: initial;}
 }
 
-section {
-  padding: 1em;
-}
-
-.clients {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  width: 1050px;
-}
-
-.clients-item {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  width: 350px;
-  height: 350px;
-  font-size: 3em;
-  font-family: 'Oswald', sans-serif;
-}
-
-  .clients-item:nth-child(odd) {
-    background-color: #f3f3f3;
-    color: #333333;
-  }
-
-  .clients-item:nth-child(odd) > .clients-item-reveal {
-    background-color: #333333;
-    color: #f3f3f3;
-  }
-
-  .clients-item:nth-child(even) {
-    background-color: #333333;
-    color: #f3f3f3;
-  }
-
-  .clients-item:nth-child(even) > .clients-item-reveal {
-    background-color: #f3f3f3;
-    color: #333333;
-  }
-
-  .clients-item:hover > .clients-item-reveal {
-    height: 100%;
-  }
-
-.clients-item-reveal {
-  align-items: flex-end;
-  bottom: 0;
-  content: '';
-  display: flex;
-  height: 0;
-  justify-content: center;
-  opacity: .8;
-  overflow: hidden;
-  position: absolute;
-  transition: .3s all cubic-bezier(0.075, 0.82, 0.165, 1);
-  width: 100%;
-}
-
-.clients-item-reveal-button {
-  background: transparent;
-  color: inherit;
+.btn {
+  background-color: #333333;
+  border: 1px solid #333333;
+  border-radius: 5px;
+  color: #e3e3e3;
   cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  font-size: .75em;
+  justify-content: center;
+  padding: .25em .5em;
+  transition: all .2s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+section {
   padding: 1em;
 }
 
@@ -167,8 +104,9 @@ form {
 .form-unit {
   display: flex;
   flex-direction: column;
-  text-align: left;
   justify-content: flex-start;
+  margin-bottom: .5em;
+  text-align: left;
 }
 
 .form-unit label {
@@ -180,7 +118,7 @@ form {
 .form-unit textarea {
   border: none;
   border-radius: 5px;
-  font-family: 'Lobster', cursive;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.25em;
   padding: .5em;
 }
@@ -190,27 +128,23 @@ form {
 }
 
 .form-unit button {
-  background-color: transparent;
-  border: 1px solid #333333;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: 'Lobster', cursive;
   font-size: 1.25em;
   padding: .5em;
-  transition: all .2s ease-in-out;
 }
 
 @media (min-width: 600px) {
   form { width: 75%; }
 
-  .form-unit button:hover {
-    background-color: #333333;
-    color: #E2E2E2;
+  .btn:hover {
+    background-color: #e2e2e2;
+    color: #333333;
   }
 
   .title { font-size: 5em; }
 
-  .subtitle { font-size: 1.5em; margin-top: -20px; }
+  .subtitle { font-size: 1.5em; }
+
+  .btn { font-size: 1em };
 }
 
 @media (min-width: 1024px) {
@@ -218,5 +152,7 @@ form {
 
   .title { font-size: 8.5em; }
 
-  .subtitle { font-size: 2.2em; margin-top: -30px; }
+  .subtitle { font-size: 2.2em; }
+
+  .btn { font-size: 1.5em };
 }
